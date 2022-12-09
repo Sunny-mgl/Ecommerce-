@@ -49,9 +49,6 @@ menuClose.addEventListener("click", () => menU.classList.add("hide"))
 
 
 
-
-
-
 /*const items = [
     {
       id: 1,

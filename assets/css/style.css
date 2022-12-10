@@ -46,7 +46,6 @@ body{
     color: var(--text-color);
    
 }
-
 body.dark{
     --first-color: hsl(182, 53%, 74%);
     --button-color: hsl(246, 16%, 12%);
@@ -58,6 +57,58 @@ body.dark{
     --container-color: hsl(246, 16%, 12%);
     --border-color: hsl(0, 0%, 20%);
 }
+
+
+
+.loader{
+    background-color: var(--container-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.loader.hide{
+    display: none;
+}
+
+.loader  img{
+    width: 100px;
+    position: relative;
+    animation: load 1.5s infinite;
+    animation-timing-function: linear;
+    
+}
+@keyframes load{
+    0%{
+       top: 0;
+       fill: var(--first-color);
+     }
+     50%{
+        top: -30px;
+       fill: var(--text-color);
+     }
+     100%{
+        top: 0;
+       fill: var(--first-color);
+     }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -76,8 +127,14 @@ img{
     position: fixed;
     top: 0;
     left: 0;
- 
     width: 100%;
+    
+    
+}
+
+.navbar.scroll-a{
+    background-color: var(--container-color);
+
 }
 
 .icono{
@@ -133,7 +190,7 @@ padding: 2.5rem 1.5rem 1rem 1.5rem;
   max-width: 500px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
  
 
 }
@@ -199,7 +256,14 @@ right: 0;
    margin-top: 1rem;
 }
 
-
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
 /*-----------------------------------*/
 
 
@@ -224,7 +288,9 @@ right: 0;
 
 .home-data{
     margin-left: 2rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
+   
+
 }
 
 .title{
@@ -265,7 +331,6 @@ right: 0;
 
 
 .add-button{
-    display: inline-block;
     width: 170px;
     height: 65px;
     font-size: 15px;
@@ -278,8 +343,9 @@ right: 0;
 }
 .add-button:hover{
     background-color: var(--first-color);
-   color: bodyvar(--text-color);
+   color: body var(--text-color);
 }
+
 
 
 /*------------------NOMBRES-----------------------*/
@@ -444,7 +510,7 @@ right: 0;
 
 
 
-@media screen and (min-width: 680px)  {
+@media screen and (min-width: 670px)  {
    .info{
     display: flex;
     justify-content: center;
@@ -467,23 +533,22 @@ right: 0;
     flex-direction: row ;
     gap: 2rem;
 }
-/*.conteiner{
-    display: flex;
-    gap: 3rem;
-   padding: 0rem 1rem;
-}
-
-.home-img{
-    width: 400%;
-    
+.conteiner{
+   display: flex;
+  flex-direction: row-reverse;   
    
 }
+
 
 .home-data{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    justify-content: center;
+   align-items: center;
+   padding: 4rem 2rem 8rem 10rem;
     
-}*/
+}
+
+
 
 }

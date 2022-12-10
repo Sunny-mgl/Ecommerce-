@@ -42,9 +42,32 @@ menuClose.addEventListener("click", () => menU.classList.add("hide"))
 
 
 
+const loadComponent = () => {
+  const loader = document.getElementById("loader")
+
+  setTimeout(() => {
+    
+   console.log("ya pasaron 3 segundos ")
+   loader.classList.add("hide") 
+  }, 3000)
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+
+loadComponent()
+})
 
 
+const nav = document.querySelector("nav")
 
+window.addEventListener("scroll",() =>{ 
+  if (scrollY >= 50){
+      nav.classList.add("scroll-a")
+  }else {
+      nav.classList.remove("scroll-a")
+  }
+})
 
 
 

@@ -130,6 +130,7 @@ img{
     width: 100%;
     
     
+    
 }
 
 .navbar.scroll-a{
@@ -185,12 +186,12 @@ padding: 2.5rem 1.5rem 1rem 1.5rem;
 
 .cart-d{
   background-color: var(--container-color);
-  width: 100%;
-  height: 100%;
+  width: 400%;
+  height: 1000%;
   max-width: 500px;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
  
 
 }
@@ -227,8 +228,8 @@ right: -8px;
 /*--------------MENU--------------*/
 .menu{
 background-color: var(--container-color);
-width: 100%;
-height: 100%;
+width: 400%;
+height: 1000%;
 max-width: 500px;
 position: absolute;
 top: 0;
@@ -548,7 +549,6 @@ right: 0;
    padding: 4rem 2rem 8rem 10rem;
     
 }
-
 
 
 }

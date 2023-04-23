@@ -3,20 +3,20 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  /*========== Colors ==========*/
-  --first-color: hsl(354, 78%, 60%);
-  --button-color: hsl(0, 0%, 17%);
-  --button-color-alt: hsl(0, 0%, 21%);
-  --card-color: hsl(0, 0%, 90%);
-  --title-color: hsl(0, 0%, 15%);
-  --text-color: hsl(0, 0%, 35%);
-  --text-color-light: hsl(0, 0%, 55%);
-  --body-color: hsl(206, 4%, 97%);
-  --container-color: #fff;
-  --border-color: hsl(0, 0%, 94%);
+    /*========== Colors ==========*/
+    --first-color: hsl(354, 78%, 60%);
+    --button-color: hsl(0, 0%, 17%);
+    --button-color-alt: hsl(0, 0%, 21%);
+    --card-color: hsl(0, 0%, 90%);
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 55%);
+    --body-color: hsl(206, 4%, 97%);
+    --container-color: #fff;
+    --border-color: hsl(0, 0%, 94%);
 
-  /*========== Font and typography ==========*/
-  --body-font: 'Roboto', sans-serif;
+    /*========== Font and typography ==========*/
+    --body-font: 'Roboto', sans-serif;
 }
 
 /*=============== THEME ===============*/
@@ -32,21 +32,22 @@
     --container-color: hsl(246, 16%, 12%);
     --border-color: hsl(0, 0%, 20%);
 */
-  
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--body-font);
     background-color: var(--body-color);
     color: var(--text-color);
-   
+    overflow-x: hidden;
 }
-body.dark{
+
+body.dark {
     --first-color: hsl(182, 53%, 74%);
     --button-color: hsl(246, 16%, 12%);
     --button-color-alt: hsl(0, 0%, 28%);
@@ -60,7 +61,7 @@ body.dark{
 
 
 
-.loader{
+.loader {
     background-color: var(--container-color);
     width: 100%;
     height: 100%;
@@ -74,30 +75,33 @@ body.dark{
 
 }
 
-.loader.hide{
+.loader.hide {
     display: none;
 }
 
-.loader  img{
+.loader img {
     width: 100px;
     position: relative;
     animation: load 1.5s infinite;
     animation-timing-function: linear;
-    
+
 }
-@keyframes load{
-    0%{
-       top: 0;
-       fill: var(--first-color);
-     }
-     50%{
-        top: -30px;
-       fill: var(--text-color);
-     }
-     100%{
+
+@keyframes load {
+    0% {
         top: 0;
-       fill: var(--first-color);
-     }
+        fill: var(--first-color);
+    }
+
+    50% {
+        top: -30px;
+        fill: var(--text-color);
+    }
+
+    100% {
+        top: 0;
+        fill: var(--first-color);
+    }
 }
 
 
@@ -112,12 +116,12 @@ body.dark{
 
 
 
-img{
+img {
     max-width: 100%;
     display: block;
 }
 
-.navbar{
+.navbar {
     display: flex;
     padding: 1rem 1.5rem;
     justify-content: space-between;
@@ -128,29 +132,29 @@ img{
     top: 0;
     left: 0;
     width: 100%;
-    
-    
-    
+
+
+
 }
 
-.navbar.scroll-a{
+.navbar.scroll-a {
     background-color: var(--container-color);
 
 }
 
-.icono{
-   width: 50px;
-   fill: var(--first-color);
-  
+.icono {
+    width: 50px;
+    fill: var(--first-color);
+
 }
 
-.icons{
- display: flex;
-   gap: 1rem;
-   align-items: center;
+.icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
-.icon-name{
+.icon-name {
     font-size: 20px;
     position: relative;
     left: -180%;
@@ -184,80 +188,83 @@ padding: 2.5rem 1.5rem 1rem 1.5rem;
 
 /*--------------CARRITO------------------*/
 
-.cart-d{
-  background-color: var(--container-color);
-  width: 400%;
-  height: 1000%;
-  max-width: 500px;
-  position: absolute;
-  top: 0;
-  right: 0;
- 
-
-}
-.cart-d.hide{
-   left: -100%;
-}
-.nav-close{
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-}
-
-
-.cart-shop{
-position: relative;
-
-}
-
-.cart-counter{
-padding: .25rem;
-background-color: var(--title-color);
-color: var(--body-color);
-border-radius: 50%;
-width: 1.25rem;
-height: 1.25rem;
-display: flex;
-justify-content: center;
-align-items: center;
-position: absolute;
-bottom: -8px;
-right: -8px;
-}
-
-/*--------------MENU--------------*/
-.menu{
-background-color: var(--container-color);
-width: 400%;
-height: 1000%;
-max-width: 500px;
-position: absolute;
-top: 0;
-right: 0;
+.cart-d {
+    background-color: var(--container-color);
+    width: 400%;
+    height: 1000%;
+    max-width: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
 
 
 }
 
-.menu.hide{
-    left:-100%;
+.cart-d.hide {
+    left: -100%;
 }
 
-.menu-{
+.nav-close {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
 }
-.icon-menu{
+
+
+.cart-shop {
+    position: relative;
+
+}
+
+.cart-counter {
+    padding: .25rem;
+    background-color: var(--title-color);
+    color: var(--body-color);
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+}
+
+/*--------------MENU--------------*/
+.menu {
+    background-color: var(--container-color);
+    width: 400%;
+    height: 1000%;
+    max-width: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+
+}
+
+.menu.hide {
+    left: -100%;
+}
+
+.menu- {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.icon-menu {
     position: relative;
 }
 
-.nav-item{
+.nav-item {
     list-style: none;
     font-size: 1rem;
-   margin-top: 1rem;
+    margin-top: 1rem;
 }
 
-.items{
+.items {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -265,54 +272,52 @@ right: 0;
     padding: 2rem;
     gap: 1rem;
 }
+
 /*-----------------------------------*/
 
 
-.home-img{
+.home-img {
     background-color: var(--first-color);
     width: 258px;
     height: 430px;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     justify-self: flex-end;
     margin-left: 55%;
-
-
-}
-.conteiner{
-    width: 100%;
-    height: 100%;
-    
 }
 
-.home-data{
+.home-img-container{
+    margin-left: 8rem;
+}
+
+.home-data {
     margin-left: 2rem;
     margin-top: 5rem;
-   
+
 
 }
 
-.title{
+.title {
     font-size: 40px;
     color: var(--title-color);
 }
 
-.description{
+.description {
     font-size: 20px;
     margin-bottom: .5rem;
 }
 
 
-.price{
-     
+.price {
+
     color: var(--first-color);
     font-size: 22px;
-    
+
 }
 
-.dis-button{
+.dis-button {
     margin-top: 2rem;
     width: 100px;
     height: 50px;
@@ -321,17 +326,20 @@ right: 0;
     margin-right: -4px;
     color: var(--title-color);
     font-weight: bold;
-   font-size: 100%;
-   transition: color 4s;
-  
-    
-}
-.dis-button:hover{
-     color: var(--container-color);
+    font-size: 100%;
+    transition: color 4s;
 }
 
+.add-button-h1{
+    color: white;
+    font-size: 1rem;
+}
 
-.add-button{
+.dis-button:hover {
+    color: var(--body-color);
+}
+
+.add-button {
     width: 170px;
     height: 65px;
     font-size: 15px;
@@ -339,19 +347,20 @@ right: 0;
     border: none;
     background-color: var(--button-color);
     color: var(--container-color);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-    transition: background-color 2s ;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: background-color 2s;
 }
-.add-button:hover{
+
+.add-button:hover {
     background-color: var(--first-color);
-   color: body var(--text-color);
+    color: body var(--text-color);
 }
 
 
 
 /*------------------NOMBRES-----------------------*/
 
-.products{
+.products {
     padding: 5rem 1rem;
     display: flex;
     justify-content: center;
@@ -359,90 +368,92 @@ right: 0;
     min-width: 500px;
 }
 
-.t-shirt-name{
+.t-shirt-name {
     margin-right: 2rem;
 }
 
-.sweater{
-   margin-left: 2rem;
+.sweater {
+    margin-left: 2rem;
 }
 
-.show1{
+.show1 {
     font-size: 25px;
-   
+
 }
 
-.show2{
+.show2 {
     font-size: 25px;
-   
+
 }
 
 
-.all1{
+.all1 {
     font-size: 18px;
-  
-   
+
+
 }
 
-.all2{
+.all2 {
     font-size: 18px;
-  
-    
+
+
 }
 
-.name{
+.name {
     border-right: 1px solid var(--text-color);
-   padding: 0rem 1rem;
-    
+    padding: 0rem 1rem;
+
 }
 
 /*-----------------------------*/
-.new-products{
-     margin-bottom: 5rem;
-     min-width: 500px;
+.new-products {
+    margin-bottom: 5rem;
+    min-width: 500px;
 }
 
-.contenedor-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: .5rem; 
+.contenedor-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
 
 
 }
 
-.card-sweater{
+.card-sweater {
     background-color: var(--text-color-light);
     width: 50%;
     height: 60%;
     border-radius: 11px 11px 0 0;
 
-   
+
 }
-.contenedor-p{
+
+.contenedor-p {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.span{
+.span {
     padding: 1rem;
-    background-color: var(--container-color); 
+    background-color: var(--container-color);
     width: 50%;
     height: 50%;
     max-width: 314px;
 }
 
 
-.hoodies{
+.hoodies {
     display: flex;
     justify-content: center;
-  
-   
-    
+
+
+
 }
+
 .hoodies h1 {
     font-size: 22px;
     color: var(--title-color);
@@ -451,14 +462,15 @@ right: 0;
     padding: 0 1rem;
     margin-right: 0.1rem;
 }
-.hoodies h3{
+
+.hoodies h3 {
     font-size: 15px;
     margin-top: 3px;
-  
+
 
 }
 
-.h2{
+.h2 {
     display: flex;
     justify-content: center;
     color: var(--title-color);
@@ -467,88 +479,167 @@ right: 0;
 
 
 /*----------------FOOTER-------------------*/
-.footer{
+.footer {
     background-color: var(--card-color);
     padding: 3rem 0.5rem;
     min-width: 500px;
 }
 
-.info{
+.info {
     border-bottom: 1px solid var(--container-color);
 }
 
-.info2{
+.info2 {
     padding: 2rem;
 }
 
-.info-h2{
+.info-h2 {
     font-size: 20px;
     color: var(--title-color);
     margin-bottom: 1rem;
 }
 
-.h4{
+.h4 {
     font-size: 15px;
     margin-top: 1rem;
-    
+
 }
 
 .info2 i {
     padding: 0 0.5rem;
-    
+
 }
 
-.academlo{
-  display: flex;
-  justify-content: center;
-  padding: 4rem 0 0 2rem;
+.academlo {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0 0 2rem;
 }
 
-.academlo h3{
+.academlo h3 {
     margin-left: 0.5rem;
 }
 
+@media screen and (min-width: 338px){
 
-
-
-@media screen and (min-width: 670px)  {
-   .info{
-    display: flex;
-    justify-content: center;
- gap: 8rem;
-   }
-
-   .new-products{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-   }
-
-.t-shirt-name{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-}
-.sweater{
-    display: flex;
-    flex-direction: row ;
-    gap: 2rem;
-}
-.conteiner{
-   display: flex;
-  flex-direction: row-reverse;   
-   
+    .footer {
+        width: 130%;
+        overflow-x: hidden;
+    }
 }
 
 
-.home-data{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   align-items: center;
-   padding: 4rem 2rem 8rem 10rem;
-    
+@media screen and (min-width: 670px) {
+    .info {
+        display: flex;
+        justify-content: center;
+        gap: 8rem;
+        margin-left: 5rem;
+        margin-right: 3rem;
+        padding: 3rem;
+    }
+
+    .footer {
+        width: 150%;
+    }
+
+    .new-products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20rem;
+    }
+
+    .t-shirt-name {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .sweater {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .conteiner {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+
+    .home-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem 8rem 10rem;
+        margin-right: -4rem;
+
+    }
+
+    .icon-name {
+        margin-left: 6rem;
+    }
+
+    .products{
+      display: grid;
+      grid-template-columns: 25% 20% 25%;
+      justify-content: center;
+      margin-left: 10rem;
+    }
+
+  .home-img{
+    position: relative;
+    width: 20rem;
+    margin-left: 15rem;
+    height: 100vh;
+  }
+
+  .home-img-container{
+    margin-right: -18rem;
+    z-index: -10;
+  }
+
 }
+
+@media screen and (min-width: 1000px) {
+    .home-img{
+        position: relative;
+        width: 20rem;
+        margin-right: 20rem;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .footer {
+        width: 130%;
+        overflow: hidden;
+    }
+    .info{
+    margin-right: 30rem;
+    }
+
+    .icon-name {
+        margin-right: 7rem;
+    }
+
+    .products{
+        display: grid;
+      grid-template-columns: 25% 1% 25%;
+        margin-left: -4rem;
+        overflow: hidden;
+     }
+
+     .new-products{
+        margin-left: 2rem;
+        overflow: hidden;
+     }
+
+     .academlo{
+      margin-right: 28rem;
+     }
 
 
 }
